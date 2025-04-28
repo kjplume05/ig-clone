@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner&family=Kanit:wght@200&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lexend+Exa:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Expanded+One&display=swap');
+@import "tailwindcss";
+
+@theme {
+    --color-lightest: #F8F3D9;
+    --color-light: #EBE5C2;
+    --color-mid: #B9B28A;
+    --color-dark: #504B38;
+}
+
+:root {
+    --color-lightest: #F8F3D9;
+    --color-light: #EBE5C2;
+    --color-mid: #B9B28A;
+    --color-dark: #504B38;
+}
+
+@layer base {
+    body {
+        font-family: 'Montserrat', sans-serif;
+        background-color: #F8F3D9;
+    }
+
+    h1 {
+        font-family: "Special Gothic Expanded One", serif;
+    }
+}
+
+@layer components {
+    .input {
+        background-color: var(--color-light);
+        border: var(--color-dark);
+        @apply border-3 rounded-md mb-2 p-1;
+    }
+
+    .btn {
+        @apply p-2 border-dark border-3 rounded-2xl bg-mid hover:cursor-pointer max-w-fit;
+    }
+}
